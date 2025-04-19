@@ -1,0 +1,10 @@
+### Docker Commands 
+docker-compose up
+docker-compose down
+
+### Details to connect Postgres SQL to Power BI
+server->127.0.0.1:5432
+database->ETL_Pipeline
+
+username->postgres
+password->your postgres password
