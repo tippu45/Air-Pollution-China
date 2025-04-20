@@ -68,11 +68,10 @@ docker compose up -d
 - **Encoding**:
   - Converted categorical fields: `Weather Condition`, `Season`, `City`, `Day of Week` to string types.
 - **Scaling**:
-  - Applied **MinMaxScaler** on columns like `PM2.5`, `Temperature`, `Humidity`.
+  - Applied **PowerTransformer** on columns like `PM2.5`, `Temperature`, `Humidity`.
 - **Feature Engineering**:
   - Created `Is_Weekend`, `Pollution_Category`, `AQI_Level`, and `Day_Time_Slot` columns.
 - **Outlier Treatment**: Identified outliers using IQR/boxplot logic (optional).
-- **Normalization**: For better ML-readiness and consistency.
 
 ---
 
