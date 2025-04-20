@@ -1,5 +1,3 @@
-Here’s a comprehensive `README.md` for your Air Pollution China Data Pipeline project. It includes everything: project overview, folder structure, tech stack, setup instructions, transformations used, visualizations, and more. You can enhance it with actual image links or screenshots of your visualizations once available.
-
 ---
 
 ```markdown
