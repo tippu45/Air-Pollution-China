@@ -12,17 +12,20 @@ Air-Pollution-China/
 ├── Dataset/
 │   └── air_pollution_china.csv           # Raw dataset
 │   └── processed.csv                     # Transformed dataset
-├── Kestra-Flows/
-│   └── extract_task.yaml                 # Download raw CSV using Python
-│   └── transform_task.yaml               # Data Cleaning + Feature Engineering
-│   └── load_task.yaml                    # Load to PostgreSQL
-│   └── count_query_task.yaml             # Fetch count from DB
-├── PowerBI/
-│   └── AirPollutionDashboard.pbix        # Power BI dashboard
-├── Scripts/
-│   └── load_to_postgres.py               # Alternative local load script
+├── ETL Tasks/
+│   └── task_1(extract).py                 # Download raw CSV using Python
+│   └── task_2(transform).py               # Data Cleaning + Feature Engineering
+│   └── task_3(load).py                    # Load to PostgreSQL
+│   └── verify.py                          # Fetch count from DB
+├── Flows/
+│   └── air_pollution_china.yaml
+├── AirPollutionDashboard.pbix              # Power BI dashboard
+├── commands.txt
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── sql_commands.sql
 ├── README.md                             # 📄 Project documentation
-└── .env                                  # Optional: environment config
 ```
 
 ---
