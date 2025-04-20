@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🌏 Air Pollution China - ETL Data Pipeline Project
 
@@ -35,10 +33,9 @@ Air-Pollution-China/
 |--------------|-----------------------------------------------|
 | Orchestration | 🟦 Kestra (Docker-based)                      |
 | Language     | 🐍 Python (pandas, SQLAlchemy)                 |
-| Storage      | 🐘 PostgreSQL (Docker)                         |
+| Storage      | 🐘 PostgreSQL                                  |
 | Visualization| 📊 Power BI                                    |
 | Versioning   | 🔁 Git / GitHub                                |
-| Others       | 🐳 Docker, psycopg2, pymysql, pip, SQLAlchemy  |
 
 ---
 
@@ -114,65 +111,3 @@ PowerBI/
 ├── viz2_map.png
 ├── viz3_heatmap.png
 ```
-
-Or embed them in markdown:
-
-```markdown
-![Line Chart](PowerBI/viz1_line_chart.png)
-![Map View](PowerBI/viz2_map.png)
-```
-
----
-
-## 🧪 Sample Kestra Flow: `load_task.yaml`
-
-```yaml
-id: load_to_postgres
-type: io.kestra.plugin.scripts.python.Script
-taskRunner:
-  type: io.kestra.plugin.core.runner.Process
-beforeCommands:
-  - python3 -m venv .venv
-  - . .venv/bin/activate
-  - pip install pandas sqlalchemy psycopg2
-script: |
-  import pandas as pd
-  from sqlalchemy import create_engine
-  df = pd.read_csv('processed.csv')
-  engine = create_engine("postgresql+psycopg2://postgres:2002@host.docker.internal:5432/ETL_Pipeline")
-  df.to_sql("Air_Pollution_Data", engine, if_exists='replace', index=False)
-  print("Loaded data into PostgreSQL")
-```
-
----
-
-## 🧾 Future Work
-
-- Add **machine learning models** to predict AQI.
-- Automate scheduling using **Kestra triggers**.
-- Stream real-time data using **Kafka or APIs**.
-
----
-
-## 🤝 Contributors
-
-- 👤 [Your Name] - Developer & Analyst
-
----
-
-## 📄 License
-
-This project is open-sourced under the MIT License.
-
----
-
-```
-
-Let me know if you want me to:
-
-- Add image links
-- Turn this into a `README.md` file and save it
-- Create GIFs of dashboard interaction
-- Help you publish it on GitHub or Power BI Service
-
-Happy documenting! 📝
