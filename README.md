@@ -95,7 +95,6 @@ SELECT COUNT(*) FROM "Air_Pollution_Data";
 | 📈 Line Chart | Pollutant levels vs Time |
 | 📊 Bar Chart | City-wise comparison of AQI |
 | 🌍 Map View | Pollution spread based on Latitude/Longitude |
-| 📅 Heatmap | Pollution by Day of Week & Hour |
 | ☁️ Weather-Pollution | How weather affects pollutant levels |
 
 ### Screenshots 📸
