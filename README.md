@@ -43,8 +43,8 @@ Air-Pollution-China/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/air-pollution-etl-pipeline.git
-cd air-pollution-etl-pipeline
+git clone https://github.com/tippu45/air-pollution-china.git
+cd air-pollution-china
 ```
 
 ### 2. Start Kestra with Docker
@@ -59,12 +59,6 @@ docker compose up -d
   2. `transform_task.yaml`
   3. `load_task.yaml`
   4. `count_query_task.yaml` *(Optional verification)*
-
-### 4. Load data manually (Optional - Python)
-```bash
-cd Scripts/
-python load_to_postgres.py
-```
 
 ---
 
