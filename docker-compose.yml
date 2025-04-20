@@ -1,3 +1,9 @@
+volumes:
+  postgres-data:
+    driver: local
+  kestra-data:
+    driver: local
+
 services:
   postgres:
     image: postgres
@@ -14,10 +20,8 @@ services:
       retries: 10
 
   kestra:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: kestra-custom:latest
+    image: kestra/kestra:latest
+    pull_policy: always
     user: "root"
     command: server standalone
     volumes:
@@ -57,9 +61,3 @@ services:
     depends_on:
       postgres:
         condition: service_started
-
-volumes:
-  postgres-data:
-    driver: local
-  kestra-data:
-    driver: local
